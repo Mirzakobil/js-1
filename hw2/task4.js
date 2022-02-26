@@ -13,4 +13,4 @@ const vovelsCounter = (str) => {
 
 vovelsCounter('The current directory is AD-123')
 // expected output → 8
-// actual output → 7 vovels list didn't contain capital letters
+// actual output → 7 vovels list didn't contain capital letters 
