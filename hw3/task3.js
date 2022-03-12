@@ -41,6 +41,7 @@ class Animal extends Zoo {
         this.height = height;
         this.placeOfOrigin = placeOfOrigin;
     }
+//--------------should be in Zoo class or in animal class?-----------------------
     addAnimal(type, color, weight, height, placeOfOrigin){
         const animal = {
             type,
@@ -54,6 +55,16 @@ class Animal extends Zoo {
 
     getAnimals(){
         return this.animals
+    }
+//------------------------------------------------------------------------
+    getAnimalInfo(){
+        return `Type ${this.type} color ${this.color} weight ${this.weight}` //and so on
+    }
+    setAnimalWeight(weight){
+        this.weight = weight;
+    }
+    setAnimalHeight(height){
+        this.height = height;
     }
 }
 
@@ -85,7 +96,7 @@ class Worker extends Zoo {
         this.lastName = lastName;
         this.phone = phone;
     }
-    
+//-------------should be in Zoo clas or in Worker class? ----------------------------- 
     addWorker(firstName, lastName, phone){
         this.workers.push(firstName)
     }
@@ -108,8 +119,8 @@ class Worker extends Zoo {
             else return 'This worker does not exist'   
         }
     }
-
     getAllWorkers(){
         return this.workers;
     }
+//------------------------------------------------------------------------------------------
 }
