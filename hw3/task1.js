@@ -1,17 +1,22 @@
-const dataJson = require('./task1-data.json')
+const dollarPriceData = require('./task1-data.json')
+const euroPriceData = Object.assign({}, dollarPriceData)
 const EUR = 0.92
-dataJson.data.forEach((e) =>{
+
+
+dollarPriceData.data.forEach((e) =>{
+    e.currency = "USD";
     const dollarPrices = e.Prices;
-    e.currency = "Dollar";
+    console.log(e.currency, dollarPrices)
+}
+)
+
+euroPriceData.data.forEach((e) =>{
+    e.currency = "EUR";
     const euroPrices = e.Prices;
-    console.log(e.currency)
-    console.log('USD', dollarPrices)
-    for(price in dollarPrices){
-        const euroPrice = dollarPrices[price]*EUR; 
-        dollarPrices[price] = +parseFloat(euroPrice.toFixed(2))
+    for(price in euroPrices){
+        const euroPrice = euroPrices[price]*EUR; 
+        euroPrices[price] = +parseFloat(euroPrice.toFixed(2))
     }
-    e.currency="Euro";
-    console.log(e.currency)
-    console.log('EUR', euroPrices)
+    console.log(e.currency, euroPrices)
 }
 )
