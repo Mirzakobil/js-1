@@ -41,6 +41,20 @@ class Animal extends Zoo {
         this.height = height;
         this.placeOfOrigin = placeOfOrigin;
     }
+    addAnimal(type, color, weight, height, placeOfOrigin){
+        const animal = {
+            type,
+            color,
+            weight,
+            height,
+            placeOfOrigin
+        }
+        this.animals.push(animal)
+    }
+
+    getAnimals(){
+        return this.animals
+    }
 }
 
 class Snakes extends Animal{
@@ -93,5 +107,9 @@ class Worker extends Zoo {
             }
             else return 'This worker does not exist'   
         }
+    }
+
+    getAllWorkers(){
+        return this.workers;
     }
 }
