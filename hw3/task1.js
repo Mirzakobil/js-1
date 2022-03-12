@@ -1,4 +1,4 @@
-dataJson = require('./task1-data.json')
+const dataJson = require('./task1-data.json')
 const EUR = 0.92
 dataJson.data.forEach((e) =>{
     const dollarPrices = e.Prices;
