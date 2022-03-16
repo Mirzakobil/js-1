@@ -1,7 +1,6 @@
 const url =
   'https://api.currencyapi.com/v3/latest?apikey=8DVTdRS75ytYV7QAavO7ygpldO0EL1punjiZ6GL6';
 
-let currencies = [];
 let convertToCode = null;
 let result = null;
 
