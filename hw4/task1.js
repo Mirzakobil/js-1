@@ -12,8 +12,7 @@ function currencyConvertor(val, cur) {
     })
     .then((res) => {
       currencies = res;
-    })
-    .then(() => {
+
       Object.keys(currencies.data).map((e) => {
         if (e === cur) {
           convertToCode = e;
